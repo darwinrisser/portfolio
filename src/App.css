@@ -1,32 +1,134 @@
 .App {
+  font-style: Roboto;
+  height: 1000px; 
+  display: grid;
+  grid-template-areas:
+  "a"
+  "b"
+  "c"
+  "d"
+  "e"
+  "f"
+  "g"
+  ;
+  
+}
+
+#nav {
+  grid-area: a;
+}
+
+#nav a {
+  padding: 1em;
+  text-decoration: none;
+  color: black;
+  padding-bottom: 15px;
+}
+
+#nav a:hover {
+  border-bottom: 5px solid darkslategray;  
+}
+
+#header {
+  grid-area: b;
+  background-image: url("https://images.unsplash.com/photo-1514059583047-f6aa30400e57?ixlib=rb-0.3.5&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;s=fbc60ee747a36e63d394857b00f761f5&amp;dpr=1&amp;auto=format&amp;fit=crop&amp;w=1000&amp;q=80&amp;cs=tinysrgb");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 950px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#header h1 {
+  font-size: 80px;
+  color: white;
+  margin-bottom: 0;
+}
+
+#header h2 {
+  font-size: 20px;
+  color: white;
+  margin-bottom: 0;
+}
+
+#social {
+  color: white;
+  font-size: 70px;
+  /* padding-top: 10px; */
+}
+
+#social a {
+  color: white;
+  font-size: 60px;
+  padding: 20px;
+}
+
+#social a:hover {
+  color: orange;
+}
+
+#skills-header {
+  grid-area: c;
+  padding-top: 2em;
+}
+
+#skills-header h1{
+  text-align: center;
+  font-size: 65px;  
+}
+
+#skills {
+  grid-area: d;
+  height: 500px;
+  background-color: white;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#skillbar {
+  width: 50%;
+}
+
+#portfolio-header {
+  grid-area: e;
+  padding-top: 2em;
+}
+
+#portfolio-header h1 {
+  text-align: center;
+  font-size: 65px;
+}
+
+#portfolio-header p {
+  font-size: 16px;
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#portfolio {
+  text-align: center;
+  grid-area: f;
+  height: 600px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-direction: row;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  background-color: white;
+}
+
+#contact {
+  grid-area: g;
+  height: 100%;
   color: white;
+  background-color: purple;
+  text-align: center;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#contact h1 {
+  font-size: 65px;
 }
